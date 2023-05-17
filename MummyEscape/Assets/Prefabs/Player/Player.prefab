@@ -121,8 +121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921087085747805469}
-  m_LocalRotation: {x: -8.149073e-10, y: -0.00000012718374, z: -0.000000023399481,
-    w: 1}
+  m_LocalRotation: {x: -8.149073e-10, y: -0.00000012718374, z: -0.000000023399481, w: 1}
   m_LocalPosition: {x: -0.0000000166893, y: 0.0424338, z: 1.4901161e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.9999999}
   m_ConstrainProportionsScale: 0
@@ -600,8 +599,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5028540389434446754}
-  m_LocalRotation: {x: 9.3132235e-10, y: 0.0000000018626449, z: -0.0000000018626451,
-    w: 1}
+  m_LocalRotation: {x: 9.3132235e-10, y: 0.0000000018626449, z: -0.0000000018626451, w: 1}
   m_LocalPosition: {x: -0.000000006556511, y: 0.27949604, z: -0.000000029057263}
   m_LocalScale: {x: 1, y: 1, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -1036,8 +1034,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7301286157398479880}
-  m_LocalRotation: {x: 0.000000002793968, y: -0.000000013038519, z: -0.0000000018626456,
-    w: 1}
+  m_LocalRotation: {x: 0.000000002793968, y: -0.000000013038519, z: -0.0000000018626456, w: 1}
   m_LocalPosition: {x: -0.000000010728836, y: 0.27949622, z: -0.000000020861625}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -1058,9 +1055,9 @@ GameObject:
   - component: {fileID: 7308684092682897177}
   - component: {fileID: 269620521139995803}
   - component: {fileID: 1825707973914520657}
-  - component: {fileID: 405912231}
-  - component: {fileID: 405912232}
-  - component: {fileID: 7674795650459885633}
+  - component: {fileID: 8991107301594411874}
+  - component: {fileID: 2148345992499032880}
+  - component: {fileID: 8333599956818208692}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1135,7 +1132,7 @@ CapsuleCollider:
   m_Height: 1.773222
   m_Direction: 1
   m_Center: {x: 0, y: 0.863312, z: 0}
---- !u!114 &405912231
+--- !u!114 &8991107301594411874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1144,14 +1141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7614672882393987658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761f11f5b8c3a30438def1010961b55f, type: 3}
+  m_Script: {fileID: 11500000, guid: 88cd4cc98e776ba429419fa653fb4f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
-  animatorController: {fileID: 405912232}
+  animatorController: {fileID: 2148345992499032880}
   moveSpeed: 5
   rotateSpeed: 3
---- !u!114 &405912232
+--- !u!114 &2148345992499032880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1160,10 +1157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7614672882393987658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c324536599242f14d89c3275b681de79, type: 3}
+  m_Script: {fileID: 11500000, guid: 38b70bf3be96b4946987babb19ace75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7674795650459885633
+--- !u!114 &8333599956818208692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1172,7 +1169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7614672882393987658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea00df7d7aa82db4fa24a28ad0da5376, type: 3}
+  m_Script: {fileID: 11500000, guid: c4806157cf7a1e44bb6ac288ba89d874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
