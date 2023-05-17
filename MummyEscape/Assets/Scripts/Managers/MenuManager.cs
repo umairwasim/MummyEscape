@@ -11,7 +11,9 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        if (!audioSource)
+            audioSource = GetComponent<AudioSource>();
+
         fadeInImage.gameObject.SetActive(false);
     }
 
@@ -19,10 +21,8 @@ public class MenuManager : MonoBehaviour
     {
         audioSource.PlayOneShot(buttonClickSfx);
         fadeInImage.gameObject.SetActive(true);
-        fadeInImage.DOFade(1f, 2f)
-             .OnComplete(() =>
-         {
-             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-         });
+
+        fadeInImage.DOFade(1f, 2f).OnComplete(() =>
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
     }
 }
