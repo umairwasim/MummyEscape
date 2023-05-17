@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
         health -= damage;
 
         FeedbackPopUp.CreateFeedback(transform.position, damage.ToString());
+        AudioManager.Instance.PlaySound(AudioManager.Instance.damageSfx);
+        CameraShake.Instance.Shake(5f, 0.25f);
 
         if (health <= 0)
         {
@@ -18,8 +20,6 @@ public class Health : MonoBehaviour
 
         UIManager.Instance.SetHealth(health);
         UIManager.Instance.UpdateUI();
-        AudioManager.Instance.PlaySound(AudioManager.Instance.damageSfx);
-        CameraShake.Instance.Shake(5f, 0.25f);
     }
 
     private void Die()
