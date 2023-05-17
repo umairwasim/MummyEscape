@@ -311,7 +311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1294382222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -954,9 +954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7bf9bc99810c647ad4e84a44545d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  defaultSprite: {fileID: 0}
-  pressedSprite: {fileID: 0}
+  image: {fileID: 7798716434374722059}
+  defaultSprite: {fileID: 21300000, guid: 056254b8460f88e4abf9ccff32262880, type: 3}
+  pressedSprite: {fileID: 21300000, guid: b40c58b89dddeb94696dd0a5dc924ff5, type: 3}
 --- !u!222 &7798716434421372036
 CanvasRenderer:
   m_ObjectHideFlags: 0
