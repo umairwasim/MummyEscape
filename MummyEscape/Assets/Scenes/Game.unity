@@ -1963,6 +1963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8991107301594411874, guid: e2b63b6ded1704f4cbdfa675a37ec9cd, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 892641140}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b63b6ded1704f4cbdfa675a37ec9cd, type: 3}
 --- !u!4 &405912229 stripped
