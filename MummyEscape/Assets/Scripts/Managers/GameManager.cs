@@ -62,17 +62,17 @@ public class GameManager : MonoBehaviour
 
     private void LevelWon()
     {
-        UIManager.Instance.ShowLevelWonPanel();
+        UIManager.Instance.SetPanel(Screens.Won);
     }
 
     private void LevelLost()
     {
-        UIManager.Instance.ShowLevelLostPanel();
+        UIManager.Instance.SetPanel(Screens.Lost);
     }
 
     private void GameCompleted()
     {
-        UIManager.Instance.ShowGameCompletedPanel();
+        UIManager.Instance.SetPanel(Screens.Completed);
     }
 
     #endregion
