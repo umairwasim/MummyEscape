@@ -2,7 +2,13 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-using DG.Tweening;
+
+public enum Screens
+{
+    Won,
+    Lost,
+    Completed,
+}
 
 public class UIManager : MonoBehaviour
 {
@@ -67,6 +73,32 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Panels
+
+    public void SetPanel(Screens panel)
+    {
+        switch (panel)
+        {
+            case Screens.Won:
+                EnablePanel(levelWonPanel, Ease.InBounce);
+                break;
+            case Screens.Lost:
+                EnablePanel(levelLostPanel, Ease.InQuad);
+                break;
+            case Screens.Completed:
+                EnablePanel(gameCompletedPanel, Ease.InElastic);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void EnablePanel(GameObject uiPanel, Ease ease)
+    {
+        uiPanel.SetActive(true);
+        uiPanel.transform
+            .DOScale(Vector3.one, scaleDuration)
+            .SetEase(ease);
+    }
 
     public void ShowLevelLostPanel()
     {
