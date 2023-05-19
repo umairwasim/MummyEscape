@@ -58,21 +58,25 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         UIManager.Instance.Init();
+        AudioManager.Instance.FadeInMusic();
     }
 
     private void LevelWon()
     {
         UIManager.Instance.SetPanel(Screens.Won);
+        AudioManager.Instance.FadeOutMusic();
     }
 
     private void LevelLost()
     {
         UIManager.Instance.SetPanel(Screens.Lost);
+        AudioManager.Instance.FadeOutMusic();
     }
 
     private void GameCompleted()
     {
         UIManager.Instance.SetPanel(Screens.Completed);
+        AudioManager.Instance.FadeOutMusic();
     }
 
     #endregion
