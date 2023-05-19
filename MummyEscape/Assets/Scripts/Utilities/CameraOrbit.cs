@@ -6,6 +6,8 @@ public class CameraOrbit : MonoBehaviour
     [SerializeField] private float speed = 5f;
 
     private Vector3 offset;
+    private Vector3 rotatePosition;
+    private float angle;
 
     void Start()
     {
@@ -15,8 +17,8 @@ public class CameraOrbit : MonoBehaviour
     void LateUpdate()
     {
         //calculate rotate position 
-        float angle = speed * Time.time;
-        Vector3 rotatePosition = target.position + Quaternion.AngleAxis(angle, Vector3.up) * offset;
+        angle = speed * Time.time;
+        rotatePosition = target.position + Quaternion.AngleAxis(angle, Vector3.up) * offset;
         rotatePosition.y = transform.position.y;
 
         //Move the camera to rorate position
