@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -23,6 +24,43 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = clip;
         musicSource.Play();
+    }
+
+    public void FadeOutMusic(float fadeTime = 1f)
+    {
+        StartCoroutine(FadeOutMusicRoutine(fadeTime));
+    }
+
+    IEnumerator FadeOutMusicRoutine(float fadeTime)
+    {
+        float initialVolume = musicSource.volume;
+
+        while (musicSource.volume >= 0)
+        {
+            musicSource.volume -= initialVolume * Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        musicSource.Stop();
+        musicSource.volume = 1f;
+    }
+
+    public void FadeInMusic(float fadeTime = 1f)
+    {
+        StartCoroutine(FadeInMusicRoutine(fadeTime));
+    }
+
+    IEnumerator FadeInMusicRoutine(float fadeTime)
+    {
+        float initialVolume = 0.1f;
+
+        while (musicSource.volume <= 1)
+        {
+            musicSource.volume += initialVolume * Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        musicSource.volume = 0f;
     }
 
     //Play sound with custom volume level
