@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_NoiseProfile: {fileID: 11400000, guid: e9ce97b7a206dc64d90931ea044e0c72, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0.02
   m_FrequencyGain: 1
@@ -7596,7 +7596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 703182544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74449815e747b4b1ba000bf66f12e01a, type: 3}
+  m_Script: {fileID: 11500000, guid: f885ed858ace3a04e8f7e79829011f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2007684625
