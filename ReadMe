@@ -1,5 +1,5 @@
 
-#Mummy Escape Hyper-Casual Game
+# Mummy Escape Hyper-Casual Game
 
 A Hyper casual game prototype where based on desert/Egyptian environment where you have to sneak into the pyramid by dodging crazy mummies. 
 Each mummy has their own patrol radius, attack range, and damage dealt to the player. 
