@@ -21,6 +21,10 @@ public class EnemyAI : MonoBehaviour
     private bool isInSightRange;
     private bool isInAttackRange;
 
+    private bool IsPatrolling() => !isInSightRange && !isInAttackRange;
+    private bool IsChasing() => isInSightRange && !isInAttackRange;
+    private bool IsAttacking() => isInSightRange && isInAttackRange;
+
     private void Awake()
     {
         if (player == null)
@@ -49,13 +53,14 @@ public class EnemyAI : MonoBehaviour
         isInAttackRange = Physics.CheckSphere(transform.position, enemyData.attackRange, playerLayerMask);
     }
 
+
     private void SwitchState()
     {
-        if (!isInSightRange && !isInAttackRange)
+        if (IsPatrolling())
             Patrolling();
-        if (isInSightRange && !isInAttackRange)
+        if (IsChasing())
             ChasePlayer();
-        if (isInAttackRange && isInSightRange)
+        if (IsAttacking())
             AttackPlayer();
     }
 
@@ -82,13 +87,17 @@ public class EnemyAI : MonoBehaviour
         if (distanceToWalkPoint.magnitude < 1f)
             isWalkPointSet = false;
     }
+
     private void SearchWalkPoint()
     {
         //Calculate random point in range
         int randomXPos = Random.Range(-enemyData.walkPointRange, enemyData.walkPointRange);
         int randomZPos = Random.Range(-enemyData.walkPointRange, enemyData.walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x + randomXPos, transform.position.y, transform.position.z + randomZPos);
+        walkPoint = new Vector3(
+            transform.position.x + randomXPos,
+            transform.position.y,
+            transform.position.z + randomZPos);
 
         float maxDistance = 2f;
 
