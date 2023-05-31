@@ -17,9 +17,9 @@ public class EnemyAI : MonoBehaviour
     private Vector3 walkPoint;
 
     private bool isWalkPointSet;
-    private bool hasAlreadyAttacked;
     private bool isInSightRange;
     private bool isInAttackRange;
+    private bool hasAlreadyAttacked;
 
     private bool IsPatrolling() => !isInSightRange && !isInAttackRange;
     private bool IsChasing() => isInSightRange && !isInAttackRange;
@@ -58,8 +58,10 @@ public class EnemyAI : MonoBehaviour
     {
         if (IsPatrolling())
             Patrolling();
+
         if (IsChasing())
             ChasePlayer();
+
         if (IsAttacking())
             AttackPlayer();
     }
@@ -101,7 +103,7 @@ public class EnemyAI : MonoBehaviour
 
         float maxDistance = 2f;
 
-        if (Physics.Raycast(walkPoint, -transform.up, maxDistance, groundLayerMask))
+        if (Physics.Raycast(walkPoint, Vector3.down, maxDistance, groundLayerMask))
             isWalkPointSet = true;
     }
 
